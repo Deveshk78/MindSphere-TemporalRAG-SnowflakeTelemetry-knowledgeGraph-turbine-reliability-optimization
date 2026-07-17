@@ -224,3 +224,16 @@ If your teams are currently correlating sensor spikes and maintenance history ma
 - Visual assets index: `docs/VISUAL_ASSETS.md`
 - Thesis document: `docs/MindSphere_Temporal_RAG_Thesis_Medium.docx`
 - Leadership playbook: `docs/LEADERSHIP_DEMO_PLAYBOOK.md`
+
+## Governance and Commercialization Documents
+
+- License: `LICENSE`
+- Copyright notice: `docs/governance/COPYRIGHT_NOTICE.md`
+- Patent and IP notice: `docs/governance/PATENT_AND_IP_NOTICE.md`
+- Innovation and invention profile: `docs/governance/INNOVATION_AND_INVENTION_PROFILE.md`
+- Product purpose: `docs/governance/PRODUCT_PURPOSE.md`
+- Requirements specification: `docs/governance/REQUIREMENTS_SPECIFICATION.md`
+- Scope of work: `docs/governance/SCOPE_OF_WORK.md`
+- Quality assurance document: `docs/governance/QUALITY_ASSURANCE_DOCUMENT.md`
+- Risk management document: `docs/governance/RISK_MANAGEMENT_DOCUMENT.md`
+- Product classification and skills certification: `docs/governance/PRODUCT_CLASSIFICATION_AND_SKILLS_CERTIFICATION.md`
