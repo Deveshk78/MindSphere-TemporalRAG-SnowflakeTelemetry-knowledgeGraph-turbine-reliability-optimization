@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_raw_telemetry
+    columns:
+      - name: event_ts
+        tests:
+          - not_null
+      - name: asset_id
+        tests:
+          - not_null
+      - name: metric_name
+        tests:
+          - not_null
+
+  - name: stg_maintenance_logs
+    columns:
+      - name: log_id
+        tests:
+          - not_null
+          - unique
+      - name: asset_id
+        tests:
+          - not_null
+
+  - name: stg_temporal_state_chunks
+    columns:
+      - name: hour_ts
+        tests:
+          - not_null
+      - name: asset_id
+        tests:
+          - not_null

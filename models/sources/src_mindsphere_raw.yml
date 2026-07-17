@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    database: MINDSPHERE_TWIN_DB
+    schema: RAW
+    tables:
+      - name: raw_telemetry
+        description: Raw Siemens MindSphere telemetry stream.
+      - name: maintenance_logs
+        description: Historical unstructured maintenance logs.
+
+  - name: analytics
+    database: MINDSPHERE_TWIN_DB
+    schema: ANALYTICS
+    tables:
+      - name: telemetry_hourly_metrics
+      - name: temporal_state_chunks
+      - name: rag_audit_log

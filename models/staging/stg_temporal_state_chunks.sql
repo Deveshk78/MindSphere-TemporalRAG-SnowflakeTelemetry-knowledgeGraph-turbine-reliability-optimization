@@ -1,0 +1,22 @@
+select
+    hour_ts::timestamp_ntz as hour_ts,
+    asset_id,
+    temperature_current::float as temperature_current,
+    temperature_moving_avg_4h::float as temperature_moving_avg_4h,
+    temperature_moving_var_8h::float as temperature_moving_var_8h,
+    temperature_delta_1h::float as temperature_delta_1h,
+    vibration_current::float as vibration_current,
+    vibration_moving_avg_4h::float as vibration_moving_avg_4h,
+    vibration_moving_var_8h::float as vibration_moving_var_8h,
+    vibration_delta_1h::float as vibration_delta_1h,
+    pressure_current::float as pressure_current,
+    pressure_moving_avg_4h::float as pressure_moving_avg_4h,
+    pressure_moving_var_8h::float as pressure_moving_var_8h,
+    pressure_delta_1h::float as pressure_delta_1h,
+    has_any_alert,
+    nearest_prior_log_id,
+    nearest_prior_log_date,
+    nearest_prior_error_code,
+    nearest_prior_technician_notes,
+    temporal_state_payload
+from {{ source('analytics', 'temporal_state_chunks') }}

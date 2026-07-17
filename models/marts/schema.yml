@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fct_temporal_asset_state
+    columns:
+      - name: hour_ts
+        tests:
+          - not_null
+      - name: asset_id
+        tests:
+          - not_null
+      - name: inferred_risk_band
+        tests:
+          - accepted_values:
+              values: ['HIGH', 'ELEVATED', 'NORMAL']
+
+  - name: dim_latest_asset_health
+    columns:
+      - name: asset_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_rag_audit_log
+    columns:
+      - name: event_ts
+        tests:
+          - not_null
+      - name: safety_status
+        tests:
+          - accepted_values:
+              values: ['PASS', 'BLOCKED']
